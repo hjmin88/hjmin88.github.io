@@ -1,0 +1,19 @@
+Putty에서 ec2 instance 연결할 때
+  -> Host Name : 'IPv4 퍼블릭 IP' 로 입력
+
+ubuntu 안에서
+
+sudo su 명령어로 관리자 권한 획득
+
+vi 파일명 : 텍스트 에디터 실행
+  -> i 입력 시 insert(수정/입력) 모드
+    esc 누르면 댜시 보기 모드
+
+우분투 내의 소프트웨어를 업그레이드 할 때
+apt update
+apt upgrade
+
+커맨드창 클리어 : clear
+
+nginx 인스톨 시 80번 포트 사용 중이면 안 됨.
+  -> 해당 프로세스 죽여야 됨 (설치와 동시애 80포트에 프로세스 실행시킴)
