@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Leave Example</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type something here...">
+
+    <script>
+        var isInputChanged = false;
+
+        // 텍스트 입력 필드에 입력이 있을 경우 플래그를 설정
+        document.getElementById('textInput').addEventListener('input', function () {
+            isInputChanged = true;
+        });
+
+        // 페이지 이탈 시도 시 기본 다이얼로그 표시
+        window.addEventListener('beforeunload', function (e) {
+            if (isInputChanged) {
+                e.preventDefault(); // 페이지 이탈 방지
+                // 기본 다이얼로그 표시를 위해 returnValue 설정
+                e.returnValue = '';
+            }
+        });
+    </script>
+</body>
+</html>
